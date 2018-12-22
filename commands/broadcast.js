@@ -21,11 +21,13 @@ module.exports = {
         let m = `Successfully sent to ${a}, failed to sent to ${b}, totally ${c}`;
         msg.channel.send(m).then(m2 => {
             msg.guild.members.forEach(member => {
-                c++;
-                if(!member.user.bot) {
-                    member.send(message).catch(e => { b++ });
+                member.send(message).then(x => {
+                    c++;
                     a++;
-                } else b++;
+                }).catch(er => {
+                    a++;
+                    b++;
+                });
                 if(c == Math.round(msg.guild.memberCount).toFixed() / 8) m2.edit(m);
                 else if(c == Math.round(msg.guild.memberCount).toFixed() / 5) m2.edit(`Successfully sent to ${a}, failed to sent to ${b}, totally ${c}`);
                 else if(c == Math.round(msg.guild.memberCount).toFixed() / 3) m2.edit(`Successfully sent to ${a}, failed to sent to ${b}, totally ${c}`);
