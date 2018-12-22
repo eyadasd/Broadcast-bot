@@ -1,5 +1,5 @@
 const Discord           = require('discord.js');
-const config            = require('./config.json');
+const config            = require('../config.json');
 const prefix            = config.local.prefix;
 
 const log = (msg) => { console.log(msg) }
