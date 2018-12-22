@@ -28,8 +28,8 @@ module.exports = {
                     a++;
                     b++;
                 });
-                if(c == msg.guild.memberCount || c == msg.guild.members.size) m.edit(`**Done**\n**Successfully sent to ${a}, failed to sent to ${b}, totally ${c}**`);
-                else m.edit(`**Successfully sent to ${a}, failed to sent to ${b}, totally ${c}**`);
+                if(c == msg.guild.memberCount || c == msg.guild.members.size) m2.edit(`**Done**\n**Successfully sent to ${a}, failed to sent to ${b}, totally ${c}**`);
+                else m2.edit(`**Successfully sent to ${a}, failed to sent to ${b}, totally ${c}**`);
             });
         });
     }
