@@ -1,24 +1,19 @@
 {
-    "name": "broadcast",
-    "version": "1.0",
-    "description": "Broadcast bot",
-    "main": "index.js",
-    "scripts": {
-      "start": "node index.js"
-    },
-    "dependencies": {
-      "discord.js": "^11.4.2"
-    },
-    "engines": {
-      "node": "8.x"
-    },
-    "repository": {
-      "url": "https://glitch.com/edit/#!/hello-express"
-    },
-    "license": "MIT",
-    "keywords": [
-      "node",
-      "glitch",
-      "express"
-    ]
-  }
+  "name": "broadcast",
+  "version": "1.0.0",
+  "description": "broadcast bot by KIJ",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Broadcast-bot"
+  },
+  "author": "ImKIJ",
+  "license": "MIT"
+}
