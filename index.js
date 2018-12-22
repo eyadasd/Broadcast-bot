@@ -67,7 +67,7 @@ bot.on(`message`, async msg => {
     }
 
     if(command){
-        cmd.run(bot, msg, args);
+        command.run(bot, msg, args);
     }
 });
 
