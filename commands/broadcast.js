@@ -13,7 +13,7 @@ module.exports = {
         if(!msg.member.hasPermission('ADMINISTRATOR')) return bot.error(msg.channel, "Whoops!", "You don't meet the requirements to use this command!")
         let message     = args.join(' ');
         if(!message) return bot.error(msg.channel, "Invaild arguments!", `Please type the message you want to broadcast after the command.`);
-        if(message.length < 2000) return bot.erorr(msg.channel, "Whoops!", 'Message length cannot be longer than 2000 characters.');
+        if(message.length > 2000) return bot.error(msg.channel, "Whoops!", 'Message length cannot be longer than 2000 characters.');
         
         let a = 0;
         let b = 0;
