@@ -28,11 +28,8 @@ module.exports = {
                     a++;
                     b++;
                 });
-                if(c == Math.round(msg.guild.memberCount).toFixed() / 8) m2.edit(m);
-                else if(c == Math.round(msg.guild.memberCount).toFixed() / 5) m2.edit(`Successfully sent to ${a}, failed to sent to ${b}, totally ${c}`);
-                else if(c == Math.round(msg.guild.memberCount).toFixed() / 3) m2.edit(`Successfully sent to ${a}, failed to sent to ${b}, totally ${c}`);
-                else if(c == Math.round(msg.guild.memberCount).toFixed() / 2) m2.edit(`Successfully sent to ${a}, failed to sent to ${b}, totally ${c}`);
-                else if(c == Math.round(msg.guild.memberCount).toFixed()) m2.edit(`__**Done!**__\n` + `Successfully sent to ${a}, failed to sent to ${b}, totally ${c}`);
+                if(c == msg.guild.memberCount || c == msg.guild.members.size) m.edit(`**Done**\n**Successfully sent to ${a}, failed to sent to ${b}, totally ${c}**`);
+                else m.edit(`**Successfully sent to ${a}, failed to sent to ${b}, totally ${c}**`);
             });
         });
     }
